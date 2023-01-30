@@ -17,7 +17,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 description = "Simple data streaming protocol."
-dependencies = ["pyzmq", "websockets"]
+dependencies = ["dls-logformatter", "numpy", "pyzmq", "websockets"]
 dynamic = ["version"]
 license.file = "LICENSE"
 readme = "README.rst"
@@ -102,4 +102,4 @@ source = ["src", "**/site-packages/"]
 [tool.tox]
 legacy_tox_ini = "[tox]\nskipsdist=True\n\n[testenv:{pre-commit,mypy,pytest,docs}]\n# Don't create a virtualenv for the command, requires tox-direct plugin\ndirect = True\npassenv = *\nallowlist_externals = \n    pytest \n    pre-commit\n    mypy\n    sphinx-build\n    sphinx-autobuild\ncommands =\n    pytest: pytest {posargs}\n    mypy: mypy src tests {posargs}\n    pre-commit: pre-commit run --all-files {posargs}\n    docs: sphinx-{posargs:build -EW --keep-going} -T docs build/html\n"
 
-# dae_devops_fingerprint a3d934f3849f0eef8e7811e7af9eb3a4
+# dae_devops_fingerprint f45752168da6e2ec027292b474646f3e
