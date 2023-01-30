@@ -14,7 +14,7 @@ primary:
     - type: pypi
       list:
         # TODO: Change devops to allow extra dev-only dependencies for dls-logformatter and numpy.
-        # - dls-logformatter
-        # - numpy
+        - dls-logformatter
+        - numpy
         - pyzmq
         - websockets

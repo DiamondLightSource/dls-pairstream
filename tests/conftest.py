@@ -6,7 +6,7 @@ import shutil
 import pytest
 
 # Formatting of testing log messages.
-from dls_logformatter.dls_logformatter import DlsLogform
+from dls_logformatter.dls_logformatter import DlsLogformatter
 
 # The library version.
 from dls_pairstream_lib.version import meta as version_meta
@@ -24,7 +24,7 @@ def logging_setup(request):
     print("")
 
     handler = logging.StreamHandler()
-    handler.setFormatter(DlsLogform())
+    handler.setFormatter(DlsLogformatter())
     logging.getLogger().addHandler(handler)
     logging.getLogger().setLevel(logging.DEBUG)
 
