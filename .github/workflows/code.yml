@@ -116,7 +116,7 @@ jobs:
 
       - name: Test module --version works using the installed wheel
         # If more than one module in src/ replace with module name to test
-        run: python -m $(ls src | head -1) --version
+        run: python -m $(ls src | grep -v egg-info | head -1) --version
 
   container:
     needs: [lint, dist, test]
@@ -212,4 +212,4 @@ jobs:
         with:
           password: ${{ secrets.PYPI_TOKEN }}
 
-# dae_devops_fingerprint 57f7604cf918bb71e14f7ddeef982b51
+# dae_devops_fingerprint a01342ef3013158dd3422c064b95882f
