@@ -1,10 +1,10 @@
 import logging
 import threading
 
-from dls_pairstream_lib.pairstream import Data as PairstreamData
-from dls_pairstream_lib.pairstream import new_ReaderInterface, new_WriterInterface
 from lib_dls_protocolj.protocolj import new_ServerInterface
 
+from dls_pairstream_lib.pairstream import Data as PairstreamData
+from dls_pairstream_lib.pairstream import new_ReaderInterface, new_WriterInterface
 from exercises.base import Base
 
 logger = logging.getLogger(__name__)

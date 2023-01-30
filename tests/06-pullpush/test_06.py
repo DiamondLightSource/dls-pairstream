@@ -4,6 +4,7 @@ import queue
 import time
 
 import numpy
+
 from dls_pairstream_lib.pairstream import Data as PairstreamData
 from dls_pairstream_lib.pairstream import new_ReaderInterface, new_WriterInterface
 
